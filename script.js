@@ -1,11 +1,11 @@
 function calculate(){
     //Input variables
     const margemEmergencia = 1.3 //30%
-    const lPorKm = document.querySelector('#lPorKm').value;
-    const combustivelNoTanque = document.querySelector('#combustivelNoTanque').value;
-    const capacidadeMaxTanque = document.querySelector('#capacidadeMaxTanque').value;
-    const distanciaTrecho1 = document.querySelector('#distanciaTrecho1').value;
-    const distanciaTrecho2 = document.querySelector('#distanciaTrecho2').value;
+    const lPorKm = parseFloat(document.querySelector('#lPorKm').value);
+    const combustivelNoTanque = parseFloat(document.querySelector('#combustivelNoTanque').value);
+    const capacidadeMaxTanque = parseFloat(document.querySelector('#capacidadeMaxTanque').value);
+    const distanciaTrecho1 = parseFloat(document.querySelector('#distanciaTrecho1').value);
+    const distanciaTrecho2 = parseFloat(document.querySelector('#distanciaTrecho2').value);
     
     //Out put containers
     const aguardando = document.querySelector("#aguardando")
@@ -35,6 +35,8 @@ function calculate(){
         trechoPrincipalResult.textContent = distanciaTrecho1 + " KM";
         trechoAalternativoResult.textContent = distanciaTrecho2 + " KM";
         trechoCMargemResult.textContent = distanciaTotal + " KM";
+        console.log(distanciaTotal, distanciaTrecho1, distanciaTrecho2, margemEmergencia)
+
         qntCombNecessariaResult.textContent = combustivelNecessario + " L";
         qntAbastecerResult.textContent = combustivelAbastecer + " L";
     }
