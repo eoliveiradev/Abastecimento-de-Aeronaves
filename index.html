@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Zoiko</title>
+</head>
+<body>
+    <section class="calculator-container">
+        <div class="input-container calculator-elements">
+            <span>
+                <p>Qual o gasto médio de combustível(Em litros por KM) da aeronave?</p>
+                <input id="lPorKm" class="input-style pointer" type="number">
+            </span>
+            <span>
+                <p>Qual a quantidade de combustível no tanque da aeronave?(Litros)</p>
+                <input id="combustivelNoTanque" class="input-style pointer" type="number">
+            </span>
+            <span>
+                <p>Qual a capacidade máxima do tanque da aeronave?(Litros)</p>
+                <input id="capacidadeMaxTanque" class="input-style pointer" type="number">
+            </span>
+            <span>
+                <p>Qual a distância do trecho principal em KM?</p>
+                <input id="distanciaTrecho1" class="input-style pointer" type="number">
+            </span>
+            <span>
+                <p>Qual a distância do trecho alternativo em KM?</p>
+                <input id="distanciaTrecho2" class="input-style pointer" type="number">
+            </span>
+                <button class="button-style pointer" onclick="calculate()">Calcular</button>
+        </div>
+        <div class="output-container calculator-elements">
+            <div id="aguardando" class="output-style">
+                <h1>Aguardando...</h1>
+            </div>
+            <div id="aproved" class=" hidden flight-aproved output-style">
+                <h1>Voo Aprovado!</h1>
+                <p>Trecho principal: <span id="trechoPrincipal"></span></p>
+                <p>Trecho alternativo: <span id="trechoAlternativo"></span></p>
+                <p>Trecho total com margem de segurança: <span id="trechoCMargem"></span></p>
+                <p>Quantidade de combustivel necessária: <span id="qntCombNecessaria"></span></p>
+                <p>Quantidade necessária de abastecimento: <span id="qntAbastecer"></span></p>
+                <button class="reset-button button-style pointer" onclick="resetButton()">Reset</button>
+            </div>
+            <div id="not-aproved" class="hidden flight-notAproved output-style">
+                <h1>Voo reprovado, reveja seu planejamento!</h1>
+                <button class="reset-button button-style pointer" onclick="resetButton()">Reset</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

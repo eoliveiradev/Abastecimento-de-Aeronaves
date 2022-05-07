@@ -1,0 +1,203 @@
+:root{
+                    /*Colors*/
+                    --AlmostWhite: hsl(0, 8%, 95%);
+                    --MediumGray: hsl(0, 0%, 41%);
+                    --AlmostBlack: hsl(0, 0%, 8%);
+                    --White: #fff;
+                    --DarkBlue: #254364;
+                    --BackgroundColor: linear-gradient(90deg, rgba(190,244,130,1) 16%, rgba(80,222,178,1) 42%, rgba(0,190,206,1) 93%);
+                    --Orange: #fa7b4c;
+                    --Gold: #ffc75b;
+                    --Yellow: #f9f871;
+                    --Purple: #FBEAFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    
+}
+
+/*Suport Classes*/
+.pointer{
+    cursor:pointer
+}
+.hidden{
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: none !important;
+}
+
+/*Body*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--AlmostWhite);
+
+    
+}
+.calculator-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 70vh;
+}
+.calculator-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 49%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.input-container{
+    background-color: var(--DarkBlue);
+}
+.input-container span{
+    width: 80%;
+    height: 12%;
+    align-self: center;
+    
+    margin-bottom: 2vh;
+}
+.input-style{
+    width: 100%;
+    height: 5vh;
+    align-self: center;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    text-shadow: none;
+    margin-top: 0.5vh;
+    border:hsl(0, 0%, 8%) 1px solid;
+    border-radius: 10px;
+    transition: 0.2s;
+    
+}
+.input-style:hover , .input-style:focus{
+    background-color: #dadada;
+    
+    outline: none;
+}
+.input-style:focus{
+    border:hsl(0, 0%, 8%) 2px solid;
+}
+.button-style{
+    margin-top: 1vh;
+    align-self: center;
+    padding: 2vh 5vw;
+    border: none;
+    border-radius: 5px;
+    color: var(--White);
+    background-color: var(--Orange);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.2s;
+}
+.button-style:hover{
+    transform: translateY(-5%);
+    background-color: #ff8f67;
+}
+
+
+.output-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--DarkBlue);
+}
+.output-style{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.output-style h1{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 4vh;
+}
+.output-style p{
+    margin-top: 3vh;
+}
+.output-style p span{
+    color: var(--Gold);
+}
+.flight-aproved{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.flight-notAproved{
+    opacity: 1;
+    pointer-events: auto;
+}
+.reset-button{
+    transform: translateY(215%);
+    align-self: center;
+    transition: background-color 0.2s ease-in-out;
+}
+.reset-button:hover{
+    transform: translateY(215%) !important;
+    background-color: #ff8f67;
+}
+
+@media(max-width: 500px){
+    *{
+        font-size: 1rem;
+    }
+    body{
+        flex-direction: column;
+        height: auto;
+    }
+    .calculator-container{
+        height: auto;
+        flex-direction: column;
+        width: 95%;
+    }
+    .calculator-elements{
+        width: 100%;
+        height: 80vh;
+        margin: 2vh;
+    }
+    .input-container span{
+        height: 15%;
+        max-height: 15%;
+        margin-bottom: 1;
+    }
+    .button-style{
+        padding: 2vh 15vw;
+        transform: translateY(-2vh);
+    }
+    .button-style:hover{
+        transform: translateY(-2vh);
+    }
+    .output-style p span{
+        
+        font-size: 1.1rem;
+    }
+    .reset-button{
+        transform: translateY(0);
+        margin-top: 5vh;
+        align-self: center;
+    }
+    .reset-button:hover{
+        transform: translateY(0) !important;
+    }
+}
+@media(max-height: 700px){
+    *{
+        font-size: 0.9rem;
+    }
+}
+
+
+
