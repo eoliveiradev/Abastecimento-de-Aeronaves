@@ -50,6 +50,7 @@ body{
     align-items: center;
     width: 90%;
     height: 70vh;
+    min-height: 600px;
 }
 .calculator-elements{
     display: flex;
