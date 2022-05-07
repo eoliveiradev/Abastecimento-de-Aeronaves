@@ -21,7 +21,11 @@ function calculate(){
     //Boring math '-'
     const distanciaTotal = (distanciaTrecho1 + distanciaTrecho2) * margemEmergencia;
     const combustivelNecessario = distanciaTotal * lPorKm;
-    const combustivelAbastecer = combustivelNecessario - combustivelNoTanque;
+    let combustivelAbastecer = combustivelNecessario - combustivelNoTanque;
+    
+    if (combustivelAbastecer < 0){
+        combustivelAbastecer = 0;
+    }
 
     if (combustivelNecessario > capacidadeMaxTanque){
         aguardando.classList.add('hidden');
