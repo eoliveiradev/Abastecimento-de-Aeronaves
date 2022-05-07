@@ -149,10 +149,10 @@ body{
 .reset-button{
     transform: translateY(158%);
     align-self: center;
-    transition: background-color 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 .reset-button:hover{
-    transform: translateY(215%) !important;
+    transform: translateY(153%) !important;
     background-color: #ff8f67;
 }
 
