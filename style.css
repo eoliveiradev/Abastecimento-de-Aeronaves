@@ -50,7 +50,7 @@ body{
     align-items: center;
     width: 90%;
     height: 70vh;
-    min-height: 600px;
+    min-height: 500px;
 }
 .calculator-elements{
     display: flex;
@@ -58,7 +58,7 @@ body{
     justify-content: center;
     width: 49%;
     height: 100%;
-    min-height: 600px;
+    min-height: 500px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
