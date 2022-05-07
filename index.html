@@ -13,7 +13,7 @@
 </head>
 <body>
     <section class="calculator-container">
-        <div class="input-container calculator-elements">
+        <div id="input"class="input-container calculator-elements">
             <span>
                 <p>Qual o gasto médio de combustível(Em litros por KM) da aeronave?</p>
                 <input id="lPorKm" class="input-style pointer" type="number">
@@ -51,7 +51,7 @@
             </div>
             <div id="not-aproved" class="hidden flight-notAproved output-style">
                 <h1>Voo reprovado, reveja seu planejamento!</h1>
-                <button class="reset-button button-style pointer" onclick="resetButton()">Reset</button>
+                <a href="#input"class="button-wrapper"><button class="reset-button button-style pointer" onclick="resetButton()">Reset</button></a>
             </div>
         </div>
     </section>
