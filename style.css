@@ -147,7 +147,7 @@ body{
     pointer-events: auto;
 }
 .reset-button{
-    transform: translateY(215%);
+    transform: translateY(158%);
     align-self: center;
     transition: background-color 0.2s ease-in-out;
 }
