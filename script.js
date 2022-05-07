@@ -35,8 +35,6 @@ function calculate(){
         trechoPrincipalResult.textContent = distanciaTrecho1 + " KM";
         trechoAalternativoResult.textContent = distanciaTrecho2 + " KM";
         trechoCMargemResult.textContent = distanciaTotal + " KM";
-        console.log(distanciaTotal, distanciaTrecho1, distanciaTrecho2, margemEmergencia)
-
         qntCombNecessariaResult.textContent = combustivelNecessario + " L";
         qntAbastecerResult.textContent = combustivelAbastecer + " L";
     }
